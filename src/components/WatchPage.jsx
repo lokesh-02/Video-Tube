@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu, toggleMenu } from "../utils/appSlice";
 import { useParams, useSearchParams } from "react-router-dom";
-import CommentsContainer from "./commentsContainer";
+import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
   const dispatch = useDispatch();
