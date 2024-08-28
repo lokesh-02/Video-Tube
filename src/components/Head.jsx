@@ -34,19 +34,13 @@ const Head = () => {
     }, 100);
   };
 
-  // const getSearchSuggestions = async () => {
-  //   const resp = await fetch(YOUTUBE_SEARCH_API + searchQuery);
-  //   const data = await resp.json();
-  //   setSuggestions(data[1]);
-  //   dispatch(cacheResults({ [searchQuery]: data[1] }));
-  // };
   const getSearchSuggestions = async () => {
-    const resp = await fetch(`/api/youtubeSearch?query=${searchQuery}`);
+    const resp = await fetch(`https://cors-anywhere.herokuapp.com/${YOUTUBE_SEARCH_API}${searchQuery}`);
     const data = await resp.json();
     setSuggestions(data[1]);
     dispatch(cacheResults({ [searchQuery]: data[1] }));
   };
-  
+
 
   return (
     <div className='grid grid-flow-col p-5 m-2 shadow-md '>
