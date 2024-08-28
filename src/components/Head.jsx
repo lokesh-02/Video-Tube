@@ -6,7 +6,7 @@ import { cacheResults } from '../utils/searchSlice';
 import { useNavigate } from 'react-router-dom';
 import VideoContainer from './VideoContainer';
 
-const Head = ({ setSearchKw }) => {
+const Head = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -34,16 +34,19 @@ const Head = ({ setSearchKw }) => {
     }, 100);
   };
 
+  // const getSearchSuggestions = async () => {
+  //   const resp = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+  //   const data = await resp.json();
+  //   setSuggestions(data[1]);
+  //   dispatch(cacheResults({ [searchQuery]: data[1] }));
+  // };
   const getSearchSuggestions = async () => {
-    const resp = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const resp = await fetch(`/api/youtubeSearch?query=${searchQuery}`);
     const data = await resp.json();
     setSuggestions(data[1]);
     dispatch(cacheResults({ [searchQuery]: data[1] }));
   };
-
-  const handleSuggestionClick = (suggestionItem) => {
-    setSearchKw(suggestionItem); 
-  };
+  
 
   return (
     <div className='grid grid-flow-col p-5 m-2 shadow-md '>
