@@ -1,8 +1,21 @@
-# React + Vite
+# Video Tube App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Video Tube is a dynamic video streaming platform that mirrors the best aspects of YouTube. Explore videos, enjoy smooth playback, and interact with a user-friendly interface.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Advanced Search**: Effortlessly search for videos with real-time query suggestions, Used **Caching** to reduce API calls while searching.
+- **Smooth Video Playback**: Enjoy high-quality video playback with user controls.
+- **Responsive Layout**: Designed to look great on all screen sizes and devices.
+- **Efficient State Management**: Utilizes Redux Toolkit for effective state handling.
+- **Modern UI**: Clean and intuitive design for an enhanced user experience.
+
+## Built With
+
+- **React and JavaScript**: For crafting the interactive UI components.
+- **Redux Toolkit**: For managing application state.
+- **Tailwind CSS**: For styling and responsive design.
+
+## Live Preview
+
+Experience the application in action by visiting [Video Tube](https://video-tube-app.vercel.app/).
